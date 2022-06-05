@@ -1,87 +1,44 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <title>NCB</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/app.css">
-</head>
-
-<body>
-    <div class="container-fluid">
+{% block page %}
+<div class="page report-page">
 
 
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <img class="logo-image" src="/static/logo.png" />
-                <a class="navbar-brand" href="#"> Narcotics Control Bureau</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="about-us">About Us</a>
-                        <a class="nav-link" href="contact-us">Contact Us</a>
-                    </div>
-                </div>
+    <h2 class="title">Report Details</h2>
+
+    <form method="POST" action="/report" class="submit-form">
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Which place did the incident occur
+                in?</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="place" required>
             </div>
-        </nav>
-
-
-
-        <div class="page">
-            Report Details
-
-            <form method="POST" action="/report">
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Which place did the incident occur
-                        in?</label>
-                    <div class="col-sm-10">
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="place">
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">What time did the incident occur?</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="time">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">What happened?</label>
-                    <div class="col-sm-10">
-                        <input type="text-box" class="form-control" name="description">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Do you have any photos of the
-                        incident?</label>
-                    <div class="col-sm-2">
-                        <button type="button" class="btn btn-primary btn-sm">Upload Photos</button>
-                    </div>
-                </div>
-
-                <div>
-                    <button class="btn btn-primary" type="submit">Report Drug Trafficking</a>
-                </div>
-            </form>
-
         </div>
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">When did the incident occur?</label>
+            <div class="col-sm-8">
+                <input class="form-control" name="time" type="datetime-local" required>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">What happened?</label>
+            <div class="col-sm-8">
+                <textarea type="textarea" class="form-control" name="description" rows="3" required></textarea>
+            </div>
+        </div>
+        <!-- <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Do you have any photos of the
+                incident?</label>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-primary btn-sm">Upload Photos</button>
+            </div>
+        </div> -->
 
+        <div class="report-button">
+            <button class="btn btn-primary" type="submit">Report Drug Trafficking</a>
+        </div>
+    </form>
 
+</div>
 
-
-
-
-    </div>
-
-    </div>
-
-</body>
-
-</html>
+{% endblock %}

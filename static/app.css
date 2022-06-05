@@ -1,7 +1,72 @@
+.page {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+.header {
+    padding: 20px;
+}
+
+.navbar-nav {
+    margin-left: 50px;
+}
+
+.home-text {
+    padding: 20px 40px;
+    margin-top: 30px;
+}
+
 .logo-image {
     height: 30px;
+    margin-right: 20px;
+}
+
+
+.report-button {
+    margin: 20px;
+    align-self: center;
 }
 
 .banner-image {
     height: 400px;
+    margin: 40px 20px;
+    padding: 20px;
+}
+
+
+.footer {
+    font-size: 12px;
+    color: grey;
+    margin-top: 100px;
+    align-items: center;
+}
+
+
+
+.report-page {
+    align-items: center;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.title {
+    margin: 20px;
+}
+
+.success-page {
+    align-items: center;
+}
+
+.success-image {
+    height: 300px;
+}
+
+label {
+    font-weight: 500;
 }

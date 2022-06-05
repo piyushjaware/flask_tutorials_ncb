@@ -1,49 +1,26 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <title>NCB</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="/templates/app.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container-fluid">
-
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <!-- <img class="logo-image" src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297__340.png" /> -->
-                <a class="navbar-brand" href="#"> Narcotics Control Bureau</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">About Us</a>
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+{% block page %}
+<div class="page success-page">
 
 
+    <h2 class="title">Successfully Reported!</h2>
 
-        <div class="page">
-            Successfully Reported!
+    <img class="success-image"
+        src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/523/posts/32694/final_image/tutorial-preview-large.png">
 
-            <br />
-            Thank you for reporting the incident!
-            <br />
-            Your contribution can save the lives of many others!
 
-        </div>
+    <p>Thank you for reporting the incident!</p>
 
+    <p>Your contribution can save the lives of many others!</p>
+
+
+    <div class="footer">
+        Note: The above image is taken from https://design.tutsplus.com
     </div>
 
-</body>
+</div>
 
-</html>
+</div>
+
+{% endblock %}
